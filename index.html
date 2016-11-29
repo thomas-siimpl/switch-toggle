@@ -1,0 +1,107 @@
+<style>
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 640px;
+}
+
+.switch-toggle label {
+  display: block;
+  cursor: pointer;
+  margin: 4px 0;
+  position: relative;
+}
+.switch-toggle label .text {
+  color: #000;
+  line-height: 32px;
+}
+.switch-toggle label .text,
+.switch-toggle label .switch {
+  display: inline-block;
+}
+.switch-toggle label .switch {
+  position: absolute;
+  right: 0;
+  width: 64px;
+  height: 100%;
+}
+.switch-toggle label .switch .toggle {
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+  border-radius: 32px;
+  cursor: pointer;
+  height: 100%;
+  transition: 200ms;
+}
+.switch-toggle label .switch .toggle:before {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 200ms;
+  width: 32px;
+}
+.switch-toggle label .switch input {
+  display: none;
+}
+.switch-toggle label .switch input:checked + .toggle {
+  background-color: #0c6bbd;
+  border-color: #0c6bbd;
+}
+.switch-toggle label .switch input:checked + .toggle:before {
+  border-color: #0c6bbd;
+  transform: translateX(32px);
+}
+</style>
+
+<h1>Switch/Toggle</h1>
+<p>Pure CSS two state toggle element with single line label vertically centered.</p>
+
+<h2>Notifications</h2>
+<form class="container">
+  <div class="switch-toggle">
+    <label>
+      <div class="text">Email</div>
+      <div class="switch">
+        <input type="checkbox" name="notifications[]" value="email" checked>
+        <div class="toggle"></div>
+      </div>
+    </label>
+  </div>
+
+  <div class="switch-toggle">
+    <label>
+      <div class="text">Text</div>
+      <div class="switch">
+        <input type="checkbox" name="notifications[]" value="text">
+        <div class="toggle"></div>
+      </div>
+    </label>
+  </div>
+
+  <div class="switch-toggle">
+    <label>
+      <div class="text">Phone</div>
+      <div class="switch">
+        <input type="checkbox" name="notifications[]" value="phone">
+        <div class="toggle"></div>
+      </div>
+    </label>
+  </div>
+
+  <div class="switch-toggle">
+    <label>
+      <div class="text">Mail</div>
+      <div class="switch">
+        <input type="checkbox" name="notifications[]" value="mail">
+        <div class="toggle"></div>
+      </div>
+    </label>
+  </div>
+</form>
